@@ -3,15 +3,12 @@ import numpy as np
 import joblib
 from datetime import datetime
 
-# App configuration
 st.set_page_config(
     page_title="Credit Risk Predictor",
-    page_icon="💰",
     layout="centered",
     initial_sidebar_state="expanded"
 )
 
-# Load model with caching
 @st.cache_resource
 def load_model():
     loaded_model = joblib.load('random_forest_model.pkl')
@@ -19,7 +16,6 @@ def load_model():
     
 model = load_model()
 
-# Feature order based on the model
 FEATURES = [
     'Age', 'Sex', 'Job', 'Duration', 'Saving accounts_unknown', 
     'Saving accounts_little', 'Saving accounts_quite rich',
@@ -32,10 +28,8 @@ FEATURES = [
     'Purpose_vacation/others'
 ]
 
-# Custom CSS with improved colors
 st.markdown("""
     <style>
-    /* Main container styles */
     .main {
         background-color: #f0f2f6;
         padding: 0;
@@ -53,7 +47,6 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
-    /* Form container styling */
     .form-container {
         background-color: white;
         padding: 2rem;
@@ -62,7 +55,6 @@ st.markdown("""
         margin: 0 0.5rem 1.5rem 0.5rem;
     }
     
-    /* Section styling */
     .section {
         background-color: #f8fafc;
         padding: 1.5rem;
@@ -71,7 +63,6 @@ st.markdown("""
         border-left: 4px solid #2563eb;
     }
     
-    /* Section headers */
     .section-header {
         color: #1e3a8a;
         font-size: 1.2rem;
@@ -79,7 +70,6 @@ st.markdown("""
         margin-bottom: 1rem;
     }
     
-    /* Button styling */
     .stButton button {
         background-color: #2563eb;
         color: white;
@@ -96,7 +86,6 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(37, 99, 235, 0.4);
     }
     
-    /* Result container */
     .result-container {
         text-align: center;
         padding: 2rem;
@@ -104,21 +93,18 @@ st.markdown("""
         margin: 1rem 0.5rem;
     }
     
-    /* Success result */
     .success-result {
         background-color: #ecfdf5;
         border: 1px solid #d1fae5;
         color: #065f46;
     }
     
-    /* Denied result */
     .danger-result {
         background-color: #fef2f2;
         border: 1px solid #fee2e2;
         color: #991b1b;
     }
     
-    /* Footer styling */
     .footer {
         text-align: center;
         padding: 1.5rem;
@@ -127,14 +113,12 @@ st.markdown("""
         margin-top: 2rem;
     }
     
-    /* Help text */
     .help-text {
         font-size: 0.85rem;
         color: #6b7280;
         margin-top: 0.3rem;
     }
     
-    /* Card containers */
     .card {
         background-color: white;
         border-radius: 8px;
@@ -143,7 +127,6 @@ st.markdown("""
         margin-bottom: 1rem;
     }
     
-    /* Factor items */
     .factor-item {
         background-color: #f0f9ff;
         border-left: 3px solid #2563eb;
@@ -152,7 +135,6 @@ st.markdown("""
         border-radius: 0 4px 4px 0;
     }
     
-    /* Suggestion items */
     .suggestion-item {
         background-color: #fff7ed;
         border-left: 3px solid #ea580c;
@@ -161,7 +143,6 @@ st.markdown("""
         border-radius: 0 4px 4px 0;
     }
     
-    /* Confidence gauge */
     .confidence-container {
         margin: 1.5rem 0;
         text-align: center;
@@ -197,7 +178,6 @@ st.markdown("""
         text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     }
     
-    /* Progress steps */
     .steps-container {
         display: flex;
         justify-content: space-between;
@@ -256,24 +236,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Header section
 st.markdown("""
     <div class="header-container">
-        <h1>💰 Credit Risk Prediction Tool</h1>
+        <h1>Credit Risk Prediction Tool</h1>
         <p>Advanced assessment powered by machine learning</p>
     </div>
 """, unsafe_allow_html=True)
 
-# Sidebar information
 with st.sidebar:
-    st.title("💼 Credit Risk Assessment")
+    st.title("Credit Risk Assessment")
     st.markdown("""
-    This tool helps financial institutions evaluate loan applications using AI-powered risk assessment.
-    
-    **Features:**
-    - Quick risk evaluation
-    - Data-driven decision making
-    - Consistent assessment criteria
+    By:- Daniel Lawrence - DT20234270647 
     """)
     
     st.divider()
@@ -283,14 +256,10 @@ with st.sidebar:
         - Algorithm: Random Forest Classifier
         - Training data: German Credit Dataset
         - Key factors considered: age, income, account history, and more
-        
-        **Note:** This is a demonstration model and should be used with human oversight.
         """)
     
     st.divider()
-    st.caption(f"Last updated: {datetime.now().strftime('%B %d, %Y')}")
 
-# Steps indicator
 st.markdown("""
     <div class="steps-container">
         <div class="step active">
@@ -311,11 +280,7 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Main form
 with st.form("credit_form"):
-    st.markdown('<div class="form-container">', unsafe_allow_html=True)
-    
-    # Personal Information Section
     st.markdown('<div class="section">', unsafe_allow_html=True)
     st.markdown('<div class="section-header">👤 Personal Information</div>', unsafe_allow_html=True)
     

@@ -5,7 +5,7 @@ from datetime import datetime
 
 st.set_page_config(
     page_title="Credit Risk Predictor",
-    layout="centered",
+    layout="wide",
     initial_sidebar_state="expanded"
 )
 

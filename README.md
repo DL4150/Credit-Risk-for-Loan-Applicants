@@ -12,7 +12,8 @@ https://credit-risk-for-loan.streamlit.app/
 or 
 https://drive.google.com/file/d/18pcTKDvDZd4KCX77mVJuVmycmU8PDRpy/view?usp=sharing
 
-**REPORT LINK: [REPORT](Report - Daniel Lawrence - DT20234270647.pdf)**
+**REPORT LINK: [📄 Download Report - Daniel Lawrence - DT20234270647 (PDF)](./Report%20-%20Daniel%20Lawrence%20-%20DT20234270647.pdf)**
+
 
 **Colab Link: [Run on Google Colab](https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing)**
 or 

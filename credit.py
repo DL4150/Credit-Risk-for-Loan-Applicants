@@ -303,7 +303,7 @@ with st.form("credit_form"):
         purpose = st.selectbox("Loan Purpose", [
             "car", "furniture/equipment", "radio/TV", "domestic appliances",
             "repairs", "education", "business", "vacation/others"
-    #     ])
+         ])
     # st.markdown('</div>', unsafe_allow_html=True)
     
     # st.markdown('</div>', unsafe_allow_html=True)  # Close form container

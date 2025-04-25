@@ -260,28 +260,9 @@ with st.sidebar:
     
     st.divider()
 
-st.markdown("""
-    <div class="steps-container">
-        <div class="step active">
-            <div class="step-number">1</div>
-            <div class="step-line"></div>
-            <div class="step-label">Personal Details</div>
-        </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-line"></div>
-            <div class="step-label">Financial Info</div>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <div class="step-line"></div>
-            <div class="step-label">Results</div>
-        </div>
-    </div>
-""", unsafe_allow_html=True)
+
 
 with st.form("credit_form"):
-    st.markdown('<div class="section">', unsafe_allow_html=True)
     st.markdown('<div class="section-header">👤 Personal Information</div>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
@@ -296,8 +277,7 @@ with st.form("credit_form"):
                                               "Skilled", "Highly Skilled"][x])
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Financial Information Section
-    st.markdown('<div class="section">', unsafe_allow_html=True)
+
     st.markdown('<div class="section-header">💵 Financial Details</div>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
@@ -312,10 +292,7 @@ with st.form("credit_form"):
     
     duration = st.slider("Loan Duration (months)", 
                        min_value=1, max_value=120, value=24)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Additional Information Section
-    st.markdown('<div class="section">', unsafe_allow_html=True)
+
     st.markdown('<div class="section-header">🏠 Additional Details</div>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
@@ -326,15 +303,13 @@ with st.form("credit_form"):
         purpose = st.selectbox("Loan Purpose", [
             "car", "furniture/equipment", "radio/TV", "domestic appliances",
             "repairs", "education", "business", "vacation/others"
-        ])
-    st.markdown('</div>', unsafe_allow_html=True)
+    #     ])
+    # st.markdown('</div>', unsafe_allow_html=True)
     
-    st.markdown('</div>', unsafe_allow_html=True)  # Close form container
+    # st.markdown('</div>', unsafe_allow_html=True)  # Close form container
     
-    # Submit button
     submit = st.form_submit_button("Assess Credit Risk")
 
-# Processing and results
 if submit:
     # Show active step 3
     st.markdown("""

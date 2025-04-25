@@ -10,9 +10,9 @@ or
 https://credit-risk-for-loan.streamlit.app/
 
 
-**🎥 Demo [Watch Demo](https://drive.google.com/file/d/18pcTKDvDZd4KCX77mVJuVmycmU8PDRpy/view?usp=sharing)**
+**🎥 Demo [Watch Demo](https://drive.google.com/file/d/1NUE_JNjyujkoXCAUCWBmHkJdk5WDtvnA/view?usp=sharing)**
 or 
-https://drive.google.com/file/d/18pcTKDvDZd4KCX77mVJuVmycmU8PDRpy/view?usp=sharing
+https://drive.google.com/file/d/1NUE_JNjyujkoXCAUCWBmHkJdk5WDtvnA/view?usp=sharing
 
 
 **REPORT LINK: [📄 Download Report - Daniel Lawrence - DT20234270647 (PDF)](./Report%20-%20Daniel%20Lawrence%20-%20DT20234270647.pdf)**

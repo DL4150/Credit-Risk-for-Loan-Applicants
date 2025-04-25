@@ -3,6 +3,10 @@
 
 **Author:** Daniel Lawrence - DT20234270647  
 **Colab Link:** [Run on Google Colab](https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing)
+### 🎥 Demo
+
+[Click here to watch the demo video](demo.mp4)
+
 
 ## 📌 Overview
 

@@ -277,7 +277,7 @@ with st.form("credit_form"):
     st.markdown('</div>', unsafe_allow_html=True)
     
 
-    st.markdown('<div class="section-header">💵 Financial Details</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">💵 Financial Details:</div>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     with col1:

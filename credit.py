@@ -239,7 +239,6 @@ st.markdown("""
 st.markdown("""
     <div class="header-container">
         <h1>Credit Risk Prediction Tool</h1>
-        <p>Advanced assessment powered by machine learning</p>
     </div>
 """, unsafe_allow_html=True)
 

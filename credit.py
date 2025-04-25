@@ -307,10 +307,26 @@ with st.form("credit_form"):
     
     st.markdown('</div>', unsafe_allow_html=True)  # Close form container
     
+    st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none;
+        padding: 0.5em 1em;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+    # Submit button
     with st.form("credit_form"):
-        col1, col2, col3 = st.columns([1, 2, 1])
-        with col2:
-            submit = st.form_submit_button("Assess Credit Risk")
+        # ... your form inputs ...
+        submit = st.form_submit_button("Assess Credit Risk")
 
 if submit:
     st.markdown("""

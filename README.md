@@ -5,7 +5,7 @@
 **Colab Link:** [Run on Google Colab](https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing)
 ### 🎥 Demo
 
-[Click here to watch the demo video](demo_chat_bot.mp4)
+[Click here to watch the demo video](demo.mp4)
 
 
 ## 📌 Overview

@@ -310,25 +310,6 @@ with st.form("credit_form"):
     submit = st.form_submit_button("Assess Credit Risk")
 
 if submit:
-    st.markdown("""
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-line"></div>
-                <div class="step-label">Personal Details</div>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-line"></div>
-                <div class="step-label">Financial Info</div>
-            </div>
-            <div class="step active">
-                <div class="step-number">3</div>
-                <div class="step-line"></div>
-                <div class="step-label">Results</div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
     
     with st.spinner("Processing application data..."):
         progress_bar = st.progress(0)

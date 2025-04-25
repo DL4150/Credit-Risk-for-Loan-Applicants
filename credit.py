@@ -304,14 +304,13 @@ with st.form("credit_form"):
             "car", "furniture/equipment", "radio/TV", "domestic appliances",
             "repairs", "education", "business", "vacation/others"
          ])
-    # st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
     
-    # st.markdown('</div>', unsafe_allow_html=True)  # Close form container
+    st.markdown('</div>', unsafe_allow_html=True)  # Close form container
     
     submit = st.form_submit_button("Assess Credit Risk")
 
 if submit:
-    # Show active step 3
     st.markdown("""
         <div class="steps-container">
             <div class="step">
@@ -333,7 +332,6 @@ if submit:
     """, unsafe_allow_html=True)
     
     with st.spinner("Processing application data..."):
-        # Progress bar
         progress_bar = st.progress(0)
         for i in range(100):
             progress_bar.progress(i + 1)
@@ -341,47 +339,37 @@ if submit:
                 import time
                 time.sleep(0.03)
         
-        # Initialize feature vector with zeros
         input_vector = np.zeros(len(FEATURES))
 
-        # Assign numerical values
         input_vector[FEATURES.index('Age')] = age
         input_vector[FEATURES.index('Sex')] = 1 if sex == "Male" else 0
         input_vector[FEATURES.index('Job')] = job
         input_vector[FEATURES.index('Duration')] = duration
 
-        # One-hot encoding for Saving accounts
         save_col = f"Saving accounts_{saving_accounts}"
         if save_col in FEATURES:
             input_vector[FEATURES.index(save_col)] = 1
 
-        # One-hot encoding for Checking account
         check_col = f"Checking account_{checking_account}"
         if check_col in FEATURES:
             input_vector[FEATURES.index(check_col)] = 1
 
-        # One-hot encoding for Housing
         house_col = f"Housing_{housing}"
         if house_col in FEATURES:
             input_vector[FEATURES.index(house_col)] = 1
 
-        # One-hot encoding for Purpose
         purpose_col = f"Purpose_{purpose}"
         if purpose_col in FEATURES:
             input_vector[FEATURES.index(purpose_col)] = 1
 
-        # Make prediction
         prediction = model.predict([input_vector])[0]
         
-        # Calculate confidence (for UI demonstration)
         confidence = model.predict_proba([input_vector])[0]
         confidence_value = confidence[1] if prediction == 1 else confidence[0]
         confidence_percentage = round(confidence_value * 100)
         
-    # Clear the progress bar
     progress_bar.empty()
     
-    # Display results
     st.markdown('<div class="card">', unsafe_allow_html=True)
     
     if prediction == 1:
@@ -392,7 +380,6 @@ if submit:
             </div>
         """, unsafe_allow_html=True)
         
-        # Confidence gauge
         st.markdown(f"""
             <div class="confidence-container">
                 <p>Confidence Assessment</p>
@@ -402,26 +389,6 @@ if submit:
                 </div>
             </div>
         """, unsafe_allow_html=True)
-        
-        # Contributing factors
-        st.subheader("Key Positive Factors")
-        
-        factors = []
-        if age > 30:
-            factors.append("Age indicates established financial history")
-        if job >= 2:
-            factors.append("Skilled employment status")
-        if saving_accounts in ["moderate", "quite rich", "rich"]:
-            factors.append("Good savings account balance")
-        if checking_account in ["moderate", "rich"]:
-            factors.append("Healthy checking account")
-        if housing == "own":
-            factors.append("Property ownership")
-        if duration <= 24:
-            factors.append("Short-term loan duration")
-            
-        for factor in factors[:4]:  # Limit to top 4 factors
-            st.markdown(f"""<div class="factor-item">{factor}</div>""", unsafe_allow_html=True)
         
     else:
         st.markdown(f"""
@@ -441,31 +408,5 @@ if submit:
                 </div>
             </div>
         """, unsafe_allow_html=True)
-        
-        # Suggestions for improvement
-        st.subheader("Suggestions for Improvement")
-        
-        suggestions = []
-        if duration > 36:
-            suggestions.append("Consider a shorter loan duration")
-        if saving_accounts in ["unknown", "little"]:
-            suggestions.append("Improve savings account balance")
-        if checking_account in ["unknown", "little"]:
-            suggestions.append("Build a stronger checking account history")
-        if job < 2:
-            suggestions.append("Higher employment qualification may help")
-        if age < 25:
-            suggestions.append("Longer credit history would strengthen application")
-        
-        for suggestion in suggestions[:4]:  # Limit to top 4 suggestions
-            st.markdown(f"""<div class="suggestion-item">{suggestion}</div>""", unsafe_allow_html=True)
-    
-    st.markdown('</div>', unsafe_allow_html=True)  # Close card container
 
-# Footer
-st.markdown("""
-    <div class="footer">
-        <p>© 2025 Credit Risk Assessment Tool</p>
-        <p>This is a demonstration application for educational purposes only.</p>
-    </div>
-""", unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)

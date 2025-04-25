@@ -366,11 +366,7 @@ if submit:
         confidence = model.predict_proba([input_vector])[0]
         confidence_value = confidence[1] if prediction == 1 else confidence[0]
         confidence_percentage = round(confidence_value * 100)
-        
-    progress_bar.empty()
-    
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-    
+
     if prediction == 1:
         st.markdown(f"""
             <div class="result-container success-result">
@@ -397,7 +393,6 @@ if submit:
             </div>
         """, unsafe_allow_html=True)
         
-        # Confidence gauge
         st.markdown(f"""
             <div class="confidence-container">
                 <p>Risk Assessment Confidence</p>
@@ -407,5 +402,3 @@ if submit:
                 </div>
             </div>
         """, unsafe_allow_html=True)
-
-    st.markdown('</div>', unsafe_allow_html=True)

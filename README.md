@@ -1,8 +1,7 @@
 
 # 🏦 Credit Risk Prediction for Loan Applicants
 
-**Author:** Daniel Lawrence  
-**Project ID:** DT20234270647  
+**Author:** Daniel Lawrence - DT20234270647  
 **Colab Link:** [Run on Google Colab](https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing)
 
 ## 📌 Overview

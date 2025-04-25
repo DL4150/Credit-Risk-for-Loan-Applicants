@@ -114,7 +114,6 @@ Used **GridSearchCV** for models like Logistic Regression and XGBoost.
 ## 🧪 Evaluation Metric
 
 - **Accuracy** was the primary performance metric.
-- Future improvements could include AUC, precision-recall, and F1-score.
 
 ---
 
@@ -122,13 +121,5 @@ Used **GridSearchCV** for models like Logistic Regression and XGBoost.
 
 Open and execute the full notebook in Colab:  
 👉 [Credit Risk Prediction Notebook](https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing)
-
----
-
-## 📚 Lessons Learned
-
-- Data preprocessing, especially encoding and handling missing values, significantly impacts model performance.
-- Class balance and feature distributions must be carefully analyzed to avoid biased results.
-- Trying multiple models and tuning is key to finding a reliable solution.
 
 ---

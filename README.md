@@ -8,16 +8,20 @@
 or 
 https://credit-risk-for-loan.streamlit.app/
 
+
 **🎥 Demo [Watch Demo](https://drive.google.com/file/d/18pcTKDvDZd4KCX77mVJuVmycmU8PDRpy/view?usp=sharing)**
 or 
 https://drive.google.com/file/d/18pcTKDvDZd4KCX77mVJuVmycmU8PDRpy/view?usp=sharing
 
+
 **REPORT LINK: [📄 Download Report - Daniel Lawrence - DT20234270647 (PDF)](./Report%20-%20Daniel%20Lawrence%20-%20DT20234270647.pdf)**
+
 
 
 **Colab Link: [Run on Google Colab](https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing)**
 or 
 https://colab.research.google.com/drive/1DqkOasBa4ykOP05PbxLLIQftcdxJGrHZ?usp=sharing
+
 
 
 
